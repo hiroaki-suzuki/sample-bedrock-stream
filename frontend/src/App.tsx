@@ -1,18 +1,13 @@
-import { useState } from 'react'
 import './App.css'
+import { Header } from './components/Header.tsx'
+import { Chat } from './components/Chat.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <div className="mx-auto max-w-screen-lg p-4">
+      <Header />
+      <Chat className="mt-10" />
+    </div>
   )
 }
 
